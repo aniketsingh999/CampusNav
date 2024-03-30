@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CampusNav.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CampusNav.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="CampusNav">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginView}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Signup"
+        ContentTemplate="{DataTemplate local:SignupView}"
+        Route="SignupPage" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:HomeView}"
+        Route="HomePage" />
+
+</Shell>

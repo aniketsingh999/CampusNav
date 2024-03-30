@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampusNav.Views.SignupView"
+             xmlns:vm="clr-namespace:CampusNav.ViewModels"
+             x:DataType="vm:SignupViewModel"
+             Shell.NavBarIsVisible="false"
+             Title="Signup">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30, 0" VerticalOptions="Center">
+            <Label Text="New Account" FontSize="24" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20"/>
+            <Frame Padding="12, 5">
+                <Entry Placeholder="Name" Text="{Binding Name}" TextColor="#333"/>
+            </Frame>
+            <Frame Padding="12, 5">
+                <Entry Placeholder="Email" Text="{Binding EmailText}" TextColor="#333"/>
+            </Frame>
+            <Frame Padding="12, 5">
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding PasswordText}" TextColor="#333"/>
+            </Frame>
+            <Button Text="Create Account" Command="{Binding CreateAccountCommand}"/>
+            <Button Text="Go to login" Background="Transparent" TextColor="Gray" Clicked="OnLoginClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
